@@ -1,52 +1,48 @@
-import React from 'react';
-import CartWidget from './CartWidget';
-
+import React from 'react'
+import { Link } from "react-router-dom"
+import CartWidget from './CartWidget'
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark navbar-custom px-4 py-3">
       <div className="container-fluid">
-        <a className="navbar-brand d-flex align-items-center brand-magic" href="/">
-            <span style={{ color: '#F9D616', fontWeight: '800', fontSize: '1.7rem', fontStyle:'italic' }}>
-              Mickey's
-            </span>
-            <span style={{ color: '#ffffff', fontWeight: '400', fontSize: '1.5rem', marginLeft: '8px' }}>
-              Magic Brew
-            </span>
-        </a>
 
-        <button 
-          className="navbar-toggler border-0" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav"
-        >
-            <span style={{color:'white', fontSize:'1.5rem'}}>☰</span>
-        </button>
+        <Link className="navbar-brand" to="/">
+          Mickey's Magic Brew
+        </Link>
 
-        <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div className="collapse navbar-collapse justify-content-center">
           <ul className="navbar-nav gap-4">
+
             <li className="nav-item">
-              <a className="nav-link nav-link-magic" href="/">Inicio del Reino</a>
+              <Link className="nav-link" to="/">Inicio del Reino</Link>
             </li>
+
             <li className="nav-item">
-              <a className="nav-link nav-link-magic" href="/cafes">Elixeres</a>
+              <Link className="nav-link" to="/category/cafes">Elixeres</Link>
             </li>
+
             <li className="nav-item">
-              <a className="nav-link nav-link-magic" href="/pasteleria">Pastelería Encantada</a>
+              <Link className="nav-link" to="/category/pasteleria">
+                Pastelería Encantada
+              </Link>
             </li>
+
             <li className="nav-item">
-              <a className="nav-link nav-link-magic" href="/merch">Mercancía Mágica</a>
+              <Link className="nav-link" to="/category/merch">
+                Mercancía Mágica
+              </Link>
             </li>
+
           </ul>
         </div>
 
-        <div>
-          <CartWidget />
-        </div>
+        <CartWidget />
+
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar
+

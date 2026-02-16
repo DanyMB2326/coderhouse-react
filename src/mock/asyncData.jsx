@@ -1,39 +1,44 @@
+import besoFrio from '../assets/img/beso-frio.png'
+import galletaComeme from '../assets/img/galleta-comeme.png'
+import sombrereroLoco from '../assets/img/sombrerero-loco.png'
+import tazaSparrow from '../assets/img/taza-sparrow.png'
+
 const productos=[
     {
         id:'01',
-        name:'Random 1',
+        name:'Beso Frío',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum at, assumenda enim quae nulla.',
         stock:20,
-        price:250,
+        price:85,
         category: 'nuevos',
-        img:'https://picsum.photos/200'
+        img: besoFrio
     },
      {
         id:'02',
-        name:'Random 2',
+        name:'Galleta Cómeme',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum at, assumenda enim quae nulla.',
         stock:50,
-        price:450,
+        price:38,
         category: 'mas vendidos',
-        img:'../img/darth-vader.png'
+        img:galletaComeme
     },
      {
         id:'03',
-        name:'Random 3',
+        name:'Sombrerero Loco',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum at, assumenda enim quae nulla.',
         stock:20,
-        price:550,
+        price:90,
         category: 'mas vendidos',
-        img:'https://i.postimg.cc/h4bbrgxv/D-NQ-NP-2X-790947-MLU74201862127-012024-F.webp'
+        img:sombrereroLoco
     },
     {
         id:'04',
-        name:'Random 4',
+        name:'Taza Jack Sparrow',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum at, assumenda enim quae nulla.',
         stock:40,
         price:450,
         category: 'ofertas',
-        img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjEgjGu7SUxB4Ggx9sAYNoW5X4xQnO1E-WOA&'
+        img:tazaSparrow
     }
 ]
 

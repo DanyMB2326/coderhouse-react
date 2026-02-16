@@ -98,3 +98,98 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(206, 17, 38, 0.6);
 }
+
+/* =====================
+   CARD INTERACTIVA
+===================== */
+
+.item-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.item-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* =====================
+   IMAGEN CON ZOOM
+===================== */
+
+.img-container {
+  overflow: hidden;
+}
+
+.item-img {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.item-card:hover .item-img {
+  transform: scale(1.1);
+}
+
+/* =====================
+   BOTÓN MÁGICO ✨
+===================== */
+
+.btn-magic {
+  transition: all 0.3s ease;
+}
+
+.item-card:hover .btn-magic {
+  background-color: #b02a37; /* rojo más oscuro */
+  box-shadow: 0 0 15px rgba(220, 53, 69, 0.7);
+  transform: scale(1.05);
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer {
+  background-color: #111;
+  color: #eee;
+  padding: 2.5rem 0 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid #222;
+}
+
+.footer-min {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer-title {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #dc3545;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.footer-socials svg {
+  cursor: pointer;
+  color: #aaa;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials svg:hover {
+  transform: scale(1.15);
+  color: #dc3545;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #777;
+}
+
