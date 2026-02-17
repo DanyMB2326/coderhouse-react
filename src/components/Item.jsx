@@ -5,8 +5,6 @@ import { Link } from "react-router-dom"
 const Item = ({ prod }) => {
   return (
     <Card className="item-card h-100 shadow-lg border-0 rounded-4 overflow-hidden">
-
-      {/* Imagen */}
       <div className="img-container">
         <Card.Img
           variant="top"
@@ -15,9 +13,7 @@ const Item = ({ prod }) => {
         />
       </div>
 
-      {/* Cuerpo */}
       <Card.Body className="d-flex flex-column text-center p-4">
-
         <Card.Title className="fw-semibold fs-5">
           {prod.name}
         </Card.Title>
@@ -26,7 +22,6 @@ const Item = ({ prod }) => {
           ${prod.price},00 MX
         </Card.Text>
 
-        {/* 🔥 BOTÓN QUE VA AL DETALLE */}
         <Link to={`/item/${prod.id}`} className="mt-auto">
           <Button
             variant="danger"
@@ -35,9 +30,7 @@ const Item = ({ prod }) => {
             ✨ Ver más
           </Button>
         </Link>
-
       </Card.Body>
-
     </Card>
   )
 }

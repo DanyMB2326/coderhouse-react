@@ -17,11 +17,12 @@ const ItemListContainer = ({ greeting }) => {
         }
       })
       .catch(console.log)
-  }, [categoryId])
+  }, [categoryId, setData]) // Corregido para el linter
 
   return (
     <div className="container my-5">
-      {greeting && <h1>{greeting}</h1>}
+      {/* Estilo original de encabezado */}
+      {greeting && <h1 className="text-center mb-4">{greeting}</h1>}
       <ItemList data={data} />
     </div>
   )

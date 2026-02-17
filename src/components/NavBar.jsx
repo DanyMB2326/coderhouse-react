@@ -1,48 +1,57 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import { Navbar, Nav, Container } from 'react-bootstrap'
 import CartWidget from './CartWidget'
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark navbar-custom px-4 py-3">
-      <div className="container-fluid">
+    <Navbar bg="dark" variant="dark" expand="lg" className="px-4 py-3">
+      <Container fluid>
+        
+        <Navbar.Brand as={Link} to="/">
+          <span
+            className="fw-bold text-warning"
+            style={{ fontSize: "1.6rem", fontStyle: "italic" }}
+          >
+            Mickey's
+          </span>{" "}
+          <span className="fw-light text-white">
+            Magic Brew
+          </span>
+        </Navbar.Brand>
 
-        <Link className="navbar-brand" to="/">
-          Mickey's Magic Brew
-        </Link>
+        <Navbar.Toggle aria-controls="navbarNav" />
 
-        <div className="collapse navbar-collapse justify-content-center">
-          <ul className="navbar-nav gap-4">
+        <Navbar.Collapse id="navbarNav" className="justify-content-center">
+          <Nav className="gap-4">
+            <Nav.Link as={Link} to="/">
+              Inicio del Reino
+            </Nav.Link>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/">Inicio del Reino</Link>
-            </li>
+            <Nav.Link as={Link} to="/category/cafes">
+              Elixires
+            </Nav.Link>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/category/cafes">Elixeres</Link>
-            </li>
+            <Nav.Link as={Link} to="/category/pasteleria">
+              Pastelería Encantada
+            </Nav.Link>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/category/pasteleria">
-                Pastelería Encantada
-              </Link>
-            </li>
+            <Nav.Link as={Link} to="/category/merch">
+              Mercancía Mágica
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/category/merch">
-                Mercancía Mágica
-              </Link>
-            </li>
-
-          </ul>
-        </div>
-
+        {/* Carrito */}
         <CartWidget />
 
-      </div>
-    </nav>
+      </Container>
+    </Navbar>
   )
 }
 
 export default NavBar
+
+
+
 

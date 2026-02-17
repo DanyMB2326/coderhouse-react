@@ -4,11 +4,8 @@ import ItemCount from "./ItemCount"
 const ItemDetail = ({ product }) => {
   return (
     <div className="container my-5">
-
       <div className="row justify-content-center">
-
         <div className="col-md-6 text-center">
-
           <img
             src={product.img}
             alt={product.name}
@@ -25,13 +22,10 @@ const ItemDetail = ({ product }) => {
             Categoría: {product.category}
           </p>
 
-          {/* Contador */}
-          <ItemCount stock={10} />
-
+          {/* Pasamos el stock dinámico si lo tienes, sino el valor fijo original */}
+          <ItemCount stock={product.stock || 10} />
         </div>
-
       </div>
-
     </div>
   )
 }

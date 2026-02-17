@@ -9,9 +9,10 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     getProducts().then((res) => {
+      // Usamos Number(itemId) porque los IDs en tu mock suelen ser números
       setProduct(res.find(p => p.id === Number(itemId)))
     })
-  }, [itemId])
+  }, [itemId, setProduct]) // 🔥 Agregamos setProduct aquí
 
   if (!product) return <h2 className="text-center my-5">Cargando...</h2>
 

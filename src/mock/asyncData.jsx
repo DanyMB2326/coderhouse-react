@@ -1,58 +1,29 @@
 import besoFrio from '../assets/img/beso-frio.png'
 import galletaComeme from '../assets/img/galleta-comeme.png'
-import sombrereroLoco from '../assets/img/sombrerero-loco.png'
 import tazaSparrow from '../assets/img/taza-sparrow.png'
 
-const productos=[
-    {
-        id:'01',
-        name:'Beso Frío',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum at, assumenda enim quae nulla.',
-        stock:20,
-        price:85,
-        category: 'nuevos',
-        img: besoFrio
-    },
-     {
-        id:'02',
-        name:'Galleta Cómeme',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum at, assumenda enim quae nulla.',
-        stock:50,
-        price:38,
-        category: 'mas vendidos',
-        img:galletaComeme
-    },
-     {
-        id:'03',
-        name:'Sombrerero Loco',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum at, assumenda enim quae nulla.',
-        stock:20,
-        price:90,
-        category: 'mas vendidos',
-        img:sombrereroLoco
-    },
-    {
-        id:'04',
-        name:'Taza Jack Sparrow',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum at, assumenda enim quae nulla.',
-        stock:40,
-        price:450,
-        category: 'ofertas',
-        img:tazaSparrow
-    }
-]
+const products = [
+    { id: 1, name: "Espresso de Mickey", price: 50, category: "cafes", stock: 10, img: besoFrio },
+    { id: 2, name: "Donas de Minnie", price: 45, category: "pasteleria", stock: 15, img: galletaComeme },
+    { id: 3, name: "Taza Coleccionable", price: 150, category: "merch", stock: 5, img: tazaSparrow }
+];
 
+export const getProducts = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products);
+        }, 500);
+    });
+};
 
-let error= false
-
-export const getProducts = ()=> {
-    return new Promise((resolve, reject)=>{
-        setTimeout(()=>{
-            if(error){
-                reject('Hubo un error, intente mas tarde')
-            }else{
-                resolve(productos)
-            }
-        },3000)
-    })
-}
+/**
+ * Función para obtener un solo producto por ID
+ * Útil para ItemDetailContainer
+ */
+export const getProductById = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(p => p.id === Number(id)));
+        }, 500);
+    });
+};
