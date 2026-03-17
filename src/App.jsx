@@ -25,7 +25,7 @@ useEffect(() => { seedDatabase(); }, []); // ← run once, then comment out
             <Route path="/category/:categoryId" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<CheckoutForm />} />
+            <Route path="/checkout" element={<CheckOutForm />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
