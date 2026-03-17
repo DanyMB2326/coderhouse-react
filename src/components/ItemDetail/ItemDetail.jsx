@@ -15,7 +15,7 @@ const ItemDetail = ({ id, title, description, price, image, category, stock }) =
     <article className="item-detail">
       {/* Image */}
       <div className="detail-image-wrapper">
-        <img src={image} alt={title} className="detail-image" />
+        <img src={image} alt={title} className="detail-image" loading="lazy" />
         {stock === 0 && (
           <div className="detail-sold-out">Sin stock</div>
         )}
