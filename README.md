@@ -8,7 +8,7 @@ E-commerce SPA temático de Disney desarrollado con **React + Vite** y **Firebas
 
 ## 📸 Vista previa
 
-![Mickey's Magic Brew](https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&q=80)
+![Mickey's Magic Brew](https://drive.google.com/file/d/1QIk0_UK_j6F00qHEWjm7CYSlLvF0Rb62/view?usp=sharing)
 
 ---
 
@@ -99,7 +99,7 @@ VITE_FIREBASE_APP_ID=tu_app_id
 
 ### 4. Poblar Firestore (solo la primera vez)
 
-En `src/App.jsx` descomentá temporalmente:
+En `src/App.jsx` descomenta temporalmente:
 
 ```jsx
 import { useEffect } from 'react';
@@ -109,7 +109,7 @@ import { seedDatabase } from './firebase/seeder';
 useEffect(() => { seedDatabase(); }, []);
 ```
 
-Corré la app, esperá el mensaje `✅ Se insertaron X productos exitosamente` en la consola del navegador (F12), y volvé a comentar las líneas.
+Corre la app, espera el mensaje `✅ Se insertaron X productos exitosamente` en la consola del navegador (F12), y volvé a comentar las líneas.
 
 ### 5. Correr en desarrollo
 
@@ -181,9 +181,7 @@ Abrí [http://localhost:5173](http://localhost:5173) en el navegador.
 
 ## 🚢 Deploy
 
-Compatible con [Vercel](https://vercel.com) y [Netlify](https://netlify.com).
-
-Recordá configurar las variables de entorno en el panel del servicio antes de deployar.
+Compatible con [Netlify](https://mickeys-magic-brew.netlify.app/).
 
 ---
 
