@@ -9,12 +9,11 @@ import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
-// ── Uncomment the lines below ONLY the very first time to seed Firestore ─────
 import { useEffect } from 'react';
 import { seedDatabase } from './firebase/seeder';
 
 function App() {
-useEffect(() => { seedDatabase(); }, []); // ← run once, then comment out
+useEffect(() => { seedDatabase(); }, []); 
 
   return (
     <>
