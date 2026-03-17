@@ -4,11 +4,6 @@
 
 E-commerce SPA temático de Disney desarrollado con **React + Vite** y **Firebase Firestore** como base de datos en la nube.
 
----
-
-## 📸 Vista previa
-
-![Mickey's Magic Brew](https://drive.google.com/file/d/1QIk0_UK_j6F00qHEWjm7CYSlLvF0Rb62/view?usp=sharing)
 
 ---
 
