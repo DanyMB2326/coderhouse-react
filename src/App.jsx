@@ -4,9 +4,10 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
-import CheckOutForm from './components/CheckOutForm/CheckOutForm';
+import CheckoutForm from './components/CheckOutForm/CheckOutForm';
 import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 // ── Uncomment the lines below ONLY the very first time to seed Firestore ─────
 import { useEffect } from 'react';
@@ -17,6 +18,7 @@ useEffect(() => { seedDatabase(); }, []); // ← run once, then comment out
 
   return (
     <>
+      <ScrollToTop />
       <NavBar />
       <main>
         <div className="container">
@@ -25,7 +27,7 @@ useEffect(() => { seedDatabase(); }, []); // ← run once, then comment out
             <Route path="/category/:categoryId" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<CheckOutForm />} />
+            <Route path="/checkout" element={<CheckoutForm />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
