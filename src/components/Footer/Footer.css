@@ -2,6 +2,7 @@
   background: var(--nav-bg);
   border-top: 3px solid var(--gold);
   margin-top: 4rem;
+  padding-top: 2rem;
 }
 
 .footer-inner {
