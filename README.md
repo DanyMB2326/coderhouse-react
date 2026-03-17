@@ -81,7 +81,7 @@ npm install
 
 ### 3. Configurar variables de entorno
 
-Creá un archivo `.env` en la raíz del proyecto basándote en `.env.example`:
+Crea un archivo `.env` en la raíz del proyecto basándote en `.env.example`:
 
 ```env
 VITE_FIREBASE_API_KEY=tu_api_key
@@ -112,7 +112,7 @@ Corre la app, espera el mensaje `✅ Se insertaron X productos exitosamente` en 
 npm run dev
 ```
 
-Abrí [http://localhost:5173](http://localhost:5173) en el navegador.
+Abre [http://localhost:5173](http://localhost:5173) en el navegador.
 
 ---
 
@@ -182,7 +182,7 @@ Compatible con [Netlify](https://mickeys-magic-brew.netlify.app/).
 
 ## 👤 Autora
 
-**Daniela MB** — Proyecto Final Coderhouse React 2025
+**Daniela MB** — Proyecto Final Coderhouse React 2026
 
 [![GitHub](https://img.shields.io/badge/GitHub-DanyMB2326-181717?style=flat&logo=github)](https://github.com/DanyMB2326/coderhouse-react)
 
